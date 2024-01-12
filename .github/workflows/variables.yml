@@ -5,14 +5,16 @@ on:
 
 env:
   ACCESS_ID: ${{ vars.ACCESS_ID }}
-
+  pass: ${{secrets.abc}}
 jobs:
   build:
     runs-on: ubuntu-latest
-
+  
     steps:
     - name: Echo ACCESS_ID
       run: |
         echo ${ACCESS_ID}
         echo ${{ vars.TEST }}
         echo ${{ secrets.abc}}
+        echo ${{pass}}
+        env
