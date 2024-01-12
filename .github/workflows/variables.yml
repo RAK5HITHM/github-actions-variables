@@ -5,7 +5,7 @@ on:
 
 env:
   ACCESS_ID: ${{ vars.ACCESS_ID }}
-  pass: ${{secrets.abc}}
+  PASS: ${{secrets.abc}}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,5 +16,5 @@ jobs:
         echo ${ACCESS_ID}
         echo ${{ vars.TEST }}
         echo ${{ secrets.abc}}
-        echo ${{pass}}
+        echo ${{PASS}}
         env
