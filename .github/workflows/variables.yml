@@ -18,3 +18,8 @@ jobs:
         echo ${{ secrets.abc}}
         echo ${{ env.SEC}}
         env
+    - name: Echo Sec
+      run: |
+       echo ${{ secrets.abc}}
+       echo ${{ env.SEC}}
+          
