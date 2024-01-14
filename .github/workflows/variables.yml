@@ -20,6 +20,7 @@ jobs:
         export STEP=done
         echo $STEP
     - name: Echo Sec
+      if: ${{vars.ACCESS_ID}} == kode-kloud-123456
       run: |
        echo ${{ secrets.abc}}
        echo ${{ env.SEC}}
