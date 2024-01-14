@@ -17,7 +17,7 @@ jobs:
         echo ${{ vars.TEST }}
         echo ${{ secrets.abc}}
         echo ${{ env.SEC}}
-        echo "STEP=done" >> "$GITHUB_ENV"
+        export STEP=done
     - name: Echo Sec
       run: |
        echo ${{ secrets.abc}}
